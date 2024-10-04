@@ -12,8 +12,25 @@
 	<div class="contient">
 
 		<h1> Générateur de Mot de Passe</h1>
-		
+
+		<form method="post">
+			<label for="taille">Longueur du mot de passe :</label>
+			<input type="number" name="number" id="length" min="1" max="128" required>
+
+			<label for="chiffre">Ajout des chiffres</label>
+			<input type="checkbox" name="chiffre" id="chiffre">
+
+			<label for="uppercase">Ajout des majuscules</label>
+			<input type="checkbox" name="uppercase" id="uppercase">
+
+			<label for="special">Ajout des symboles</label>
+			<input type="checkbox" name="special" id="special">
+		</form>
+
 		<button type="button" id="Creer"> Creer</button>
+
+		<label for="genererMdp"> Mot de passe généré : </label>
+		<input type="text" name="genererMdp" id="genererMdp" readonly>
 
 	</div>
 </body>
