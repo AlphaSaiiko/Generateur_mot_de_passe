@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./style.css">
-	<script src="./script.js"></script>
-
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<title>Générateur de Mot de Passe</title>
 </head>
 <body>
@@ -15,23 +15,78 @@
 
 		<form method="post">
 			<label for="taille">Longueur du mot de passe :</label>
-			<input type="number" name="number" id="length" min="1" max="128" required>
+			<select name="taille" id="taille">
+				<optgroup label="Petit">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</optgroup>
+				<optgroup label="Grand">
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+				</optgroup>
+			</select>
 
 			<label for="chiffre">Ajout des chiffres</label>
 			<input type="checkbox" name="chiffre" id="chiffre">
 
+			<label for="lowercase"> Ajout des minuscules</label>
+			<input type="checkbox" name="lowercase" id="lowercase">
+
 			<label for="uppercase">Ajout des majuscules</label>
 			<input type="checkbox" name="uppercase" id="uppercase">
 
+			<label for="first-lettre">Commencer avec une lettre</label>
+			<input type="checkbox" name="first-lettre" id="first-lettre">
+
 			<label for="special">Ajout des symboles</label>
 			<input type="checkbox" name="special" id="special">
+
+			<label for="duplicate">Pas de répétition</label>
+			<input type="checkbox" name="duplicate" id="duplicate">
+
+			<label for="sequence"> Pas de séquence </label>
+			<input type="checkbox" name="sequence" id="sequence">
+
+			<label for="auto-start">Créer un mot de passe à votre arrivé</label>
+			<input type="checkbox" name="auto-start" id="auto-start">
+
+			<label for="quantité">Quantité</label>
+			<input type="checkbox" name="quantité" id="quantité">
+
+			<label for="save">Sauvegarder mes préférences </label>
+			<input type="checkbox" name="save" id="save">
+
 		</form>
 
-		<button type="button" id="Creer"> Creer</button>
-
-		<label for="genererMdp"> Mot de passe généré : </label>
-		<input type="text" name="genererMdp" id="genererMdp" readonly>
-
+		<button type="button" id="creer" class="button"> Creer</button>
+		<div class="input-icon">
+			<div class="généré">
+				<label for="genererMdp"> Mot de passe généré : </label>
+				<div class="prt-icon-end">
+					<input type="text" name="genererMdp" id="genererMdp" readonly>
+					<span class="material-symbols-rounded" >content_copy</span>
+				</div>
+			</div>
+		</div>
 	</div>
+
+		<button type="button" id="dossier" class="valider"> Valider</button>
+	<script src="script.js"></script>
 </body>
 </html>
