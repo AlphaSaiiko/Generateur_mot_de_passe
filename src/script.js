@@ -69,3 +69,10 @@ document.querySelector('.material-symbols-rounded').addEventListener('click', fu
 		console.error('Erreur lors de la copie du mot de passe : ', err);
 	});
 });
+
+window.onload = function () {
+	Particles.init({
+		selector: '.background',
+		connectParticles: 'true'
+	});
+};
